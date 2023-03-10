@@ -7,15 +7,24 @@ export const HeaderWrapper = styled.header`
     /* min-height: 80px; */
     /* border: 1px solid red; */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content:center;
     align-items:center;
-    padding: 12px 10px;
+    padding: 25px 10px;
+
     .icons{
-        margin: 0 10px
+        margin: 0 10px;
+        cursor: pointer;
     }
 `
-
+export const Container = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom:25px;
+`
 const GenericDiv = styled.div`
     /* padding: 10px; */
     width: fit-content;
@@ -43,6 +52,7 @@ export const Center = styled(GenericDiv)`
     h3{
         font-size: 32px;
         margin:0;
+        cursor: pointer;
     }
 `
 

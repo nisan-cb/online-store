@@ -11,7 +11,7 @@ const Hamburger: FC<HamburgerProps> = ({ onClickFunc }) => {
 
     useEffect(() => {
         if (isActive) {
-            // onClickFunc();
+            onClickFunc?.();
         }
     }, [isActive]);
 

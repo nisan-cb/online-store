@@ -19,15 +19,22 @@ export const HeaderWrapper = styled.header`
 const GenericDiv = styled.div`
     /* padding: 10px; */
     width: fit-content;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: row;
 `
 
 export const Left = styled(GenericDiv)`
     /* background-color: #ffaf; */
-    
+    flex:0.5;
+    justify-content: start;
 `
 
 export const Right = styled(GenericDiv)`
     /* background-color: #ffaf; */
+    flex:0.5;
+    justify-content: end;
 `
 
 export const Center = styled(GenericDiv)`
@@ -37,5 +44,9 @@ export const Center = styled(GenericDiv)`
         font-size: 32px;
         margin:0;
     }
+`
+
+export const Hamburger = styled.div`
+    
 `
 

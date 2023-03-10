@@ -4,6 +4,7 @@ import config from '../../config.json'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import PersonIcon from '@mui/icons-material/Person';
+import Hamburger from "./components/hamburger";
 
 const Header: FC = () => {
     const storeName = config.store_name;
@@ -25,6 +26,7 @@ const Header: FC = () => {
             {/* right */}
             <Right>
                 <PersonIcon className="icons" color="info" />
+                <Hamburger onClickFunc={() => console.log('hamburger')} />
             </Right>
         </HeaderWrapper>
     )

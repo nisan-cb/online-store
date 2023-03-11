@@ -9,11 +9,12 @@ export const FilterWrapper = styled.div`
     align-items: center;
     justify-content: start;
     padding: 0 10px;
+    position: sticky;
+    top: 20px;
 
     #filter-title{
         width:100%;
         padding: 10px 5px;
-        /* font-weight: bold; */
         font-size: 1.3rem;
         text-align: left;
     }

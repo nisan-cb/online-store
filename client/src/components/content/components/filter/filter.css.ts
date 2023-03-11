@@ -18,4 +18,8 @@ export const FilterWrapper = styled.div`
         font-size: 1.3rem;
         text-align: left;
     }
+
+    @media (max-width: 750px)  {
+        display: none;
+    }
 `

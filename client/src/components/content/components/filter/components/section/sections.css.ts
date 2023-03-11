@@ -6,6 +6,7 @@ export const SectionWrapper = styled.div`
     border-bottom: 1px solid red;
     margin-bottom:15px;
     padding: 4px 12px;
+    padding-right:0;
 `
 
 export const Label = styled.label`
@@ -13,4 +14,5 @@ export const Label = styled.label`
     cursor: pointer;
     display: flex;
     justify-content:space-between;
+    margin-bottom:20px;
 `

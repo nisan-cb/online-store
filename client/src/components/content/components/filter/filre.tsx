@@ -15,7 +15,7 @@ const Filter: FC = () => {
 
     return (
         <FilterWrapper>
-            <p>Filters</p>
+            <p id='filter-title'>Filters</p>
             {displayFilters()}
 
         </FilterWrapper>

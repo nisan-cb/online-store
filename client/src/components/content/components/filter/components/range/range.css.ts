@@ -15,12 +15,12 @@ export const RangeWrapper = styled.div`
     }
 
     #delimiter{
-        margin: 0 8px;
+        margin: 0 15px;
     }
 
     #price-range-input{
         text-align: center;
-        /* width: fit-content; */
+        width:35px;
     }
 `
 
@@ -29,6 +29,8 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction:row;
-    margin: 0 auto;
+    padding: 5px 0;
+    margin: 10px auto;
+    width:fit-content;
 `
 

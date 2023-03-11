@@ -5,6 +5,7 @@ import PriceSlider from "../range/range";
 import { Label, SectionWrapper } from "./sections.css";
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
+import MultiSelect from "../multiSelect/multiSelect";
 
 interface SectionProps {
     filterObj: FilterObj
@@ -24,7 +25,7 @@ const Section: FC<SectionProps> = ({ filterObj }) => {
     }
 
     const displayMultiSelect = () => {
-        return <>select</>
+        return <MultiSelect options={filterObj.options} />
     }
 
     const displayFilter = {

@@ -8,7 +8,7 @@ export interface FilterObj {
     type: FilterTypes;
     min?: number;
     max?: number;
-    options?: any[]
+    options?: object
 }
 
 const filters: FilterObj[] = [
@@ -21,7 +21,11 @@ const filters: FilterObj[] = [
     {
         'name': 'Colors',
         'type': FilterTypes.MULTI_SELECT,
-        'options': ['red', 'blue', 'green', 'black']
+        'options': {
+            red: 'red',
+            black: 'black',
+            green: 'green'
+        }
     }
 
 ]

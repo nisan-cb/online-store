@@ -14,7 +14,16 @@ function ItemsList() {
     }, [])
 
     const displayItems = () => {
-        return itemsList.map((v, i) => <ItemCard key={i}></ItemCard>)
+
+
+        return itemsList.map((v, i) => {
+            const itemData = {
+                title: "Item title",
+                price: 58,
+                isLiked: Math.floor(Math.random() * 10) % 2 ? true : false
+            }
+            return <ItemCard key={i} data={itemData} ></ItemCard>
+        })
     }
 
 

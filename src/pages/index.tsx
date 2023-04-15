@@ -1,13 +1,19 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import Head from 'next/head';
 import styles from './page.module.css'
+import Header from '@/components/header/header';
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
     return (
-        <main className={styles.main}>
-            home page
-        </main>
+        <>
+            <Head>
+                <title>Tip-Top</title>
+            </Head>
+            <Header />
+            <main className={styles.main}>
+                home page
+            </main>
+        </>
     )
 }

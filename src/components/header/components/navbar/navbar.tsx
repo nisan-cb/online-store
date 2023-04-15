@@ -31,7 +31,7 @@ const Navbar: FC = () => {
     }
 
     return (
-        <div>
+        <div className={styles.root}>
             <ul>{displayList()}</ul>
         </div>
     )

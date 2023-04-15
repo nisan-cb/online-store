@@ -10,7 +10,6 @@ const CategoryPage: FC<PageProps> = ({ data }) => {
     return (
         <>
             <Head title={data} />
-
             <Header />
             <main>
                 {data}

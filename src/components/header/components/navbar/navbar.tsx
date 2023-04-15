@@ -25,7 +25,6 @@ const Navbar: FC = () => {
         return list.map(item => <li key={item}>
             <Link
                 href={`/collection/${item}`}
-                id={item}
                 onClick={() => clickHandler(item)}
             >{item}</Link></li>);
     }

@@ -94,3 +94,20 @@ a {
     color-scheme: dark;
   }
 }
+
+#__next {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+/* Mobile and Tablet */
+@media (max-width: 1023px) {}

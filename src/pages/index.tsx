@@ -10,7 +10,7 @@ export default function Home() {
                 <title>Tip-Top</title>
             </Head>
             <Header />
-            <main className={styles.main}>
+            <main>
                 home page
             </main>
         </>

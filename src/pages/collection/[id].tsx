@@ -1,7 +1,7 @@
 import { FC } from "react";
 import getServerSideProps, { PageProps } from './getServerSideProps'
-import Head from "next/head";
 import Header from "@/components/header/header";
+import Head from "@/components/head/head";
 
 
 const CategoryPage: FC<PageProps> = ({ data }) => {
@@ -9,9 +9,8 @@ const CategoryPage: FC<PageProps> = ({ data }) => {
 
     return (
         <>
-            <Head>
-                <title>Tip-Top | {data}</title>
-            </Head>
+            <Head title={data} />
+
             <Header />
             <main>
                 {data}

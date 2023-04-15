@@ -25,21 +25,7 @@ const Header: FC = () => {
 
                 </div>
             </div>
-            {/* <Center>
-                    <h3>
-                        <Link href="/">{storeName}</Link>
-                    </h3>
-                </Center>
-
-                <Right>
-                    <Link href={"/account"}>
-                        <PersonIcon className="icons" color="info" />
-                    </Link>
-                    <Hamburger />
-                </Right> */}
-
-            {/* <Navbar /> */}
-
+            <Navbar />
         </header>
     )
 }

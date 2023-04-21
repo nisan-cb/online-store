@@ -2,6 +2,7 @@ import { FC } from "react";
 import getServerSideProps, { PageProps } from './getServerSideProps'
 import Header from "@/components/header/header";
 import Head from "@/components/head/head";
+import Main from "@/components/main/main";
 
 
 const CategoryPage: FC<PageProps> = ({ data }) => {
@@ -11,9 +12,9 @@ const CategoryPage: FC<PageProps> = ({ data }) => {
         <>
             <Head title={data} />
             <Header />
-            <main>
+            <Main>
                 {data}
-            </main>
+            </Main>
         </>
     )
 }

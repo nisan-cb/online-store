@@ -4,15 +4,22 @@ import Main from '@/components/main/main'
 // import styles from './page.module.css'
 import getServerSideProps, { PageProps } from './getServerSideProps'
 import { FC } from 'react'
+import Head from '@/components/head/head'
+import Header from '@/components/header/header'
+import SingleItem from '@/components/main/components/singleItem/singleItem'
 
 
 
 const Item: FC<PageProps> = ({ item }) => {
     const { id } = item;
     return (
-        <Main >
-            item page {id}
-        </Main>
+        <>
+            <Head title={id} />
+            <Header />
+            <Main >
+                <SingleItem />
+            </Main>
+        </>
     )
 }
 

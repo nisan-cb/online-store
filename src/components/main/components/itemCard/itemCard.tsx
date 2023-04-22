@@ -1,6 +1,6 @@
 import React, { FC, MouseEventHandler, useState } from 'react';
 // import { CardWrapper, Img } from './itemCard.css';
-import defaultImageSrc from './item_image_placeholder.png';
+import defaultImageSrc from '../../../../../public/item_image_placeholder.png';
 import Favorite from '@mui/icons-material/Favorite';
 import { Checkbox } from '@mui/material';
 import { FavoriteBorder } from '@mui/icons-material';

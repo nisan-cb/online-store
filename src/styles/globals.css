@@ -72,9 +72,10 @@
 
 html,
 body {
-  max-width: 100vw;
+  max-width: 1500px;
   overflow-x: hidden;
   background: none;
+  margin: 0 auto;
   /* background-color: white; */
 }
 
@@ -86,6 +87,7 @@ body {
   background-color: white;
   color: black;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border: 1px solid #ddd
 }
 
 a {
@@ -101,17 +103,18 @@ a {
 
 #__next {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
 }
 
 main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   flex-grow: 1;
+  padding-top: 50px;
 }
 
 /* Mobile and Tablet */
-@media (max-width: 1023px) {}
+/* @media (max-width: 1023px) {} */

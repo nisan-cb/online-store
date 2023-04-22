@@ -1,8 +1,5 @@
-
-import Image from "next/image";
 import styles from "./singleItem.module.scss";
-import defaultImageSrc from '../../../../../public/item_image_placeholder.png';
-import ZoomImg from "@/components/generic/zoomImg/zoomImg";
+import ImagesGallery from "@/components/generic/imagesGallery/imagesGallery";
 
 
 
@@ -12,8 +9,7 @@ const SingleItem = () => {
         <>
             <section className={styles.item_data}>
                 <div className={styles.left}>
-                    {/* <Image className={styles.main_image} src={defaultImageSrc} alt="main-image" /> */}
-                    <ZoomImg src={defaultImageSrc} />
+                    <ImagesGallery sources={[]} />
                 </div>
 
                 <div className={styles.right}>

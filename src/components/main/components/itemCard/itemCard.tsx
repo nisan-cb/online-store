@@ -27,7 +27,7 @@ const ItemCard: FC<ItemCardProps> = ({ data }) => {
     }
 
     return (
-        <Link href={`./#`}>
+        <Link href={`/item/${id}`}>
             <div className={styles.root}>
                 {/* image */}
                 <Image className={styles.image} src={defaultImageSrc} alt={'item'} />

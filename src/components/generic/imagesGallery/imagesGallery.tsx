@@ -17,7 +17,7 @@ const ImagesGallery: FC<ImagesGalleryProps> = ({ sources }) => {
     }
 
     const displaySmallImages = () => {
-        return sources.map((src, i) => <Image
+        return sources?.map((src, i) => <Image
             width={60} height={60}
             src={src}
             alt={""}

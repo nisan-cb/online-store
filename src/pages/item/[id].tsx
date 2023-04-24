@@ -11,10 +11,10 @@ import SingleItem from '@/components/main/components/singleItem/singleItem'
 
 
 const Item: FC<PageProps> = ({ item }) => {
-    const { id } = item;
+    const { id, tittle } = item;
     return (
         <>
-            <Head title={id} />
+            <Head title={tittle} />
             <Header />
             <Main >
                 <SingleItem scrollIntoView />

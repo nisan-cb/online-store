@@ -2,7 +2,7 @@
     min-height: inherit;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .col {
@@ -14,17 +14,19 @@
 
 .item_data {
     @extend .row;
-    border: 1px solid #ddd;
+    // border: 1px solid #ddd;
     width: 100%;
     height: 100vh;
     max-height: 700px;
     padding: 20px;
-    background-color: aliceblue;
+    background-color: #f0f8ff;
+    gap: 25px;
 
     .left {
-        border: 1px solid #ddd;
+        // border: 1px solid #ddd;
         flex: 1;
         height: 100%;
+        // padding-right: 0 40px;
 
         .main_image {
             width: 100%;
@@ -34,13 +36,55 @@
 
     .right {
         @extend .col;
-        border: 1px solid #ddd;
+        align-items: flex-start;
+        justify-content: start;
+        // border: 1px solid #ddd;
         flex: 1;
         height: 100%;
+    }
+
+    .tittle {
+        letter-spacing: 0.5px;
+        margin-bottom: 50px;
+    }
+
+    .price {
+        font-size: 1.6rem;
+        margin-bottom: 50px;
+    }
+
+    .metaData {
+        @extend .row;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        justify-content: start;
+        gap: 25px;
+
+        span {
+            cursor: pointer;
+        }
+    }
+
+    .main {
+        @extend .col;
+        flex: 1;
+    }
+
+    .actions {
+        @extend .row;
+        width: 100%;
+        justify-content: space-between;
+
+        button {
+            max-width: 400px;
+        }
     }
 }
 
 
 .information {
-    border: 1px solid #ddd;
+    padding-top: 100px;
+    width: 80%;
+    // border: 1px solid #ddd;
+    min-height: 300px;
 }

@@ -3,7 +3,7 @@ import config from '../../config.json'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import PersonIcon from '@mui/icons-material/Person';
-import Hamburger from "./components/hamburger/hamburger";
+// import Hamburger from "./components/hamburger/hamburger";
 import Navbar from "./components/navbar/navbar";
 import Link from 'next/link'
 import styles from './header.module.scss'

@@ -5,27 +5,17 @@ import { FC, useEffect, useState } from "react";
 // import { getActiveCategory } from "../../../../store/view/viewSelectors";
 import Link from 'next/link';
 import styles from './navbar.module.scss'
+import config from "../../../../config.json";
+interface NavbarProps {
+}
 
-const array = ['category-1', 'category-2', 'category-3', 'category-4', 'category-5']
-
-const Navbar: FC = () => {
-    // const dispatch = useDispatch();
-    const [list, setList] = useState<string[]>([]);
-    // const activeCategory = useSelector(getActiveCategory)
-
-    useEffect(() => {
-        setList(array);
-    }, []);
-
-    const clickHandler = (category: string) => {
-        // dispatch(viewActions.setActiveCategory(category));
-    }
+const Navbar: FC<NavbarProps> = ({ }) => {
+    const categoriesList = config.categories;
 
     const displayList = () => {
-        return list.map(item => <li key={item}>
+        return categoriesList.map(item => <li key={item}>
             <Link
                 href={`/collection/${item}`}
-                onClick={() => clickHandler(item)}
             >{item}</Link></li>);
     }
 

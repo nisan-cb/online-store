@@ -1,24 +1,25 @@
 import { FC } from "react";
-import getServerSideProps, { PageProps } from './getServerSideProps'
+import getStaticPaths from "./getStaticPaths";
 import Header from "@/components/header/header";
 import Head from "@/components/head/head";
 import Main from "@/components/main/main";
 import Gallery from "@/components/main/components/gallery/gallery";
+import getStaticProps from "./getStaticProps";
 
 
-const CategoryPage: FC<PageProps> = ({ data }) => {
-
+const CategoryPage: FC<CollectionPageProps> = ({ categoryName }) => {
 
     return (
         <>
-            <Head title={data} />
+            <Head title={categoryName} />
             <Header />
             <Main>
-                <Gallery />
+                <Gallery categoryName={categoryName} />
             </Main>
         </>
     )
 }
 
-export { getServerSideProps }
+export { getStaticPaths }
+export { getStaticProps }
 export default CategoryPage;

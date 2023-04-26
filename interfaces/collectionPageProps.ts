@@ -1,0 +1,3 @@
+interface CollectionPageProps {
+    categoryName: string;
+}

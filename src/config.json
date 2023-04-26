@@ -1,3 +1,10 @@
 {
-    "store_name": "Tip-Top"
+    "store_name": "Tip-Top",
+    "categories": [
+        "category-11",
+        "category-22",
+        "category-33",
+        "category-44",
+        "category-55"
+    ]
 }

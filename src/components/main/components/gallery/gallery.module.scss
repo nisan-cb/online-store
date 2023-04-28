@@ -18,8 +18,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    // overflow: hidden;
-    // padding: 0 20px;
-    // background-color: red;
+    flex: 1;
+}
 
+.loadMore {
+    width: 100%;
+    background-color: rgb(128, 31, 128);
+    height: 100px;
 }

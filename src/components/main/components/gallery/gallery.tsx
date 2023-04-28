@@ -1,26 +1,59 @@
-import React, { FC, useEffect, useRef, useState } from 'react';
-// import ItemCard from '../itemCard/itemCard';
-// import { ListWrapper } from './itemsList.css';
+import { FC, useEffect, useRef, useState } from 'react';
 import styles from './gallery.module.scss'
 import ItemCard from '../itemCard/itemCard';
 
-const array = new Array(13).fill(1);
+
 interface GalleryProps {
     categoryName: string;
     itemsList?: GalleryItemData[];
 }
 
 const Gallery: FC<GalleryProps> = ({ categoryName }) => {
-    const elRef = useRef<HTMLDivElement>(null);
     const [itemsList, setItemsList] = useState<any[]>([]);
+    const [loading, setLoading] = useState(false);
+    const elRef = useRef<HTMLDivElement>(null);
+    const categoryNameRef = useRef<string>(categoryName);
+    const observer = useRef<IntersectionObserver>();
+    const loadMoreRef = useRef<HTMLDivElement>(null);
+
 
     useEffect(() => {
-        setItemsList(array);
-    }, [])
+        createObserver();
+
+        return () => {
+            observer.current?.disconnect();
+        };
+    }, []);
+
+    useEffect(() => {
+        categoryNameRef.current = categoryName;
+        setItemsList([]);
+        fetchData();
+    }, [categoryName])
+
+    const fetchData = async () => {
+        if (loading) return;
+        console.log("fetching...")
+        setLoading(true);
+        const response = await fetch(`/api/items?categoryName=${categoryNameRef.current}`);
+        const list = await response.json();
+        setLoading(false);
+        setItemsList(prevList => [...prevList, ...list]);
+    }
+
+    const createObserver = () => {
+        observer.current = new IntersectionObserver((entries) => {
+            const firstEntry = entries[0];
+            if (firstEntry.isIntersecting) {
+                fetchData();
+            }
+        });
+
+        if (loadMoreRef.current)
+            observer.current.observe(loadMoreRef.current);
+    }
 
     const displayItems = () => {
-
-
         return itemsList.map((v, i) => {
             const itemData = {
                 id: v.id,
@@ -33,11 +66,13 @@ const Gallery: FC<GalleryProps> = ({ categoryName }) => {
     }
 
 
-
     return (
-        <div ref={elRef} className={styles.root}>
-            {displayItems()}
-        </div>
+        <>
+            <div ref={elRef} className={styles.root}>
+                {displayItems()}
+            </div>
+            <div ref={loadMoreRef} className={styles.loadMore}></div>
+        </>
     );
 }
 

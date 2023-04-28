@@ -19,7 +19,6 @@ interface ItemCardProps {
 const ItemCard: FC<ItemCardProps> = ({ data }) => {
     const { id, title, price } = data;
     const [isLiked, setIsLiked] = useState(data.isLiked)
-    console.log("render")
     const clickHandler = (e: any) => {
         e.preventDefault();
         console.log("click")

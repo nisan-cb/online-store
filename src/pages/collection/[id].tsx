@@ -3,8 +3,8 @@ import Header from "@/components/header/header";
 import Head from "@/components/head/head";
 import Main from "@/components/main/main";
 import Gallery from "@/components/main/components/gallery/gallery";
-import { getStaticPaths } from "./getStaticPaths";
-import { getStaticProps } from "./getStaticProps";
+import { getStaticPaths } from "./utils/getStaticPaths";
+import { getStaticProps } from "./utils/getStaticProps";
 
 
 const CategoryPage: FC<CollectionPageProps> = ({ categoryName }) => {

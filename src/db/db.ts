@@ -20,6 +20,12 @@ class DB {
         // const item = this.items.find(item => item.id === id);
         const item = this.items[0];
         return {
+            id: "4dasdad45",
+            tittle: "tittle",
+            price: 111,
+            mainImage: ""
+        };
+        return {
             id: item?.id || "",
             tittle: item?.tittle || "",
             price: item?.price || 0,

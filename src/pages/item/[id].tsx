@@ -29,12 +29,13 @@ const Item: FC<PageProps> = ({ item }) => {
 const getServerSideProps: GetServerSideProps<PageProps> = async (context: GetServerSidePropsContext) => {
     const params = context.params as { id: string };
     const { id } = params;
-    const data = {
-        id: "4dasdad45",
-        tittle: "tittle",
-        price: 111,
-        mainImage: ""
-    };
+    const data = await db.getItemById(id);
+    // const data = {
+    //     id: "4dasdad45",
+    //     tittle: "tittle",
+    //     price: 111,
+    //     mainImage: ""
+    // };
 
     if (!data)
         return { notFound: true };

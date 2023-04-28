@@ -19,7 +19,12 @@ class DB {
     async getItemById(id: string) {
         const item = this.items.find(item => item.id === id);
         console.log(item);
-        return item;
+        return {
+            id: item?.id || "",
+            tittle: item?.tittle || "",
+            price: item?.price || 0,
+            mainImage: item?.images[0] || ""
+        };
     }
 
 }

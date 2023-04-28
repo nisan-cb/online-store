@@ -29,7 +29,9 @@ const Item: FC<PageProps> = ({ item }) => {
 const getServerSideProps: GetServerSideProps<PageProps> = async (context: GetServerSidePropsContext) => {
     const params = context.params as { id: string };
     const { id } = params;
+    console.log("id: ", id)
     const data = await db.getItemById(id);
+    console.log(data);
     // const data = {
     //     id: "4dasdad45",
     //     tittle: "tittle",

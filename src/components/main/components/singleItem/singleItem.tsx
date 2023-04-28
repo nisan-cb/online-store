@@ -9,15 +9,7 @@ import Tabs from "@/components/generic/tabs/tabs";
 
 interface SingleItemProps {
     scrollIntoView?: boolean;
-    itemData?: {
-        id: string;
-        tittle: string;
-        price: number;
-        rating: number;
-        totalReviews: number;
-        totalOrders: number;
-        isLiked: boolean;
-    }
+    itemData?: SingleItemData
 }
 
 const defaultData = {
@@ -32,8 +24,8 @@ const defaultData = {
 
 const SingleItem: FC<SingleItemProps> = ({ scrollIntoView, itemData = defaultData }) => {
     const itemSectionRef = useRef<HTMLElement>(null);
-    const { id, tittle, price, rating, totalReviews, totalOrders, isLiked } = itemData;
-    const [like, setLike] = useState<boolean>(isLiked);
+    const { id, tittle, price } = itemData;
+    const [like, setLike] = useState<boolean>(false);
 
     useEffect(() => {
         if (scrollIntoView)
@@ -58,9 +50,9 @@ const SingleItem: FC<SingleItemProps> = ({ scrollIntoView, itemData = defaultDat
                     <p className={styles.price}>{price}$</p>
                     {/* rating reviews total orders */}
                     <div className={styles.metaData}>
-                        <Rating value={rating} readOnly />
-                        <span>{totalReviews} reviews</span>
-                        <span>{totalOrders} orders</span>
+                        <Rating value={3} readOnly />
+                        <span>{255} reviews</span>
+                        <span>{12} orders</span>
                     </div>
 
                     <div className={styles.main}>

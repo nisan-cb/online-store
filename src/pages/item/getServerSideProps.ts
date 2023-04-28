@@ -1,21 +1,19 @@
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
-
+import db from "@/db/db";
 export interface PageProps {
-    item: {
-        id: string,
-        tittle: string,
-        price: string
-    };
+    item: SingleItemData
 }
 
 
 
 const fetchItemData = async (itemId: string) => {
     console.log(`request for single item: ${itemId}`)
+    const item = await db.getItemById(itemId)
     return {
-        id: itemId,
-        tittle: "tittle",
-        price: "58$"
+        id: item?.id || "",
+        tittle: item?.tittle || "",
+        price: item?.price || 0,
+        mainImage: item?.images[0] || ""
     }
 }
 

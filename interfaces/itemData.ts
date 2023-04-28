@@ -12,3 +12,10 @@ interface GalleryItemData {
     price: number;
     images: string[];
 }
+
+interface SingleItemData {
+    id: string;
+    tittle: string;
+    price: number;
+    mainImage: string;
+}

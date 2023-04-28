@@ -17,7 +17,7 @@ const Item: FC<PageProps> = ({ item }) => {
             <Head title={tittle} />
             <Header />
             <Main >
-                <SingleItem scrollIntoView />
+                <SingleItem itemData={item} scrollIntoView />
             </Main>
         </>
     )

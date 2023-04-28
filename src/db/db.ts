@@ -16,6 +16,12 @@ class DB {
         })
     }
 
+    async getItemById(id: string) {
+        const item = this.items.find(item => item.id === id);
+        console.log(item);
+        return item;
+    }
+
 }
 
 export default new DB();

@@ -18,7 +18,7 @@ const fetchItemData = async (itemId: string) => {
 }
 
 
-const getServerSideProps: GetServerSideProps<PageProps> = async (context: GetServerSidePropsContext) => {
+export const getServerSideProps: GetServerSideProps<PageProps> = async (context: GetServerSidePropsContext) => {
     const params = context.params as { id: string };
     // Fetch data for the current dynamic path
     const { id } = params;
@@ -32,4 +32,3 @@ const getServerSideProps: GetServerSideProps<PageProps> = async (context: GetSer
     return { props: { item: data } };
 }
 
-export default getServerSideProps;

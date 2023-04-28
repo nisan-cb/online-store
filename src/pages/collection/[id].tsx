@@ -1,10 +1,10 @@
 import { FC } from "react";
-import getStaticPaths from "./getStaticPaths";
 import Header from "@/components/header/header";
 import Head from "@/components/head/head";
 import Main from "@/components/main/main";
 import Gallery from "@/components/main/components/gallery/gallery";
-import getStaticProps from "./getStaticProps";
+import { getStaticPaths } from "./getStaticPaths";
+import { getStaticProps } from "./getStaticProps";
 
 
 const CategoryPage: FC<CollectionPageProps> = ({ categoryName }) => {

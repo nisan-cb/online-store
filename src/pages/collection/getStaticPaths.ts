@@ -1,7 +1,7 @@
 import { GetStaticPaths } from 'next'
 import config from "../../config.json";
 
-const getStaticPaths: GetStaticPaths = () => {
+export const getStaticPaths: GetStaticPaths = () => {
     const paths = config.categories;
 
     const mappedPaths = paths.map((path) => ({ params: { id: path } }));
@@ -13,4 +13,4 @@ const getStaticPaths: GetStaticPaths = () => {
     };
 }
 
-export default getStaticPaths;
+    ;

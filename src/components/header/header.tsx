@@ -7,6 +7,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import Navbar from "./components/navbar/navbar";
 import Link from 'next/link'
 import styles from './header.module.scss'
+import Hamburger from "./components/navbar/hamburger/hamburger";
 
 const Header: FC = () => {
     const storeName = config.store_name;
@@ -15,14 +16,12 @@ const Header: FC = () => {
         <header id={styles.header}>
             <div className={styles.container}>
                 <div className={styles.left}>
-                    {/* <ShoppingCartIcon className="icons" color="info" /> */}
-                    {/* <FavoriteIcon className="icons" color="info" /> */}
                 </div>
                 <div className={styles.center}>
                     <Link href="/"><h1>{storeName}</h1></Link>
                 </div>
                 <div className={styles.right}>
-
+                    <Hamburger />
                 </div>
             </div>
             <Navbar />

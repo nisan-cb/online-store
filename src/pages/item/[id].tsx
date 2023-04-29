@@ -8,7 +8,6 @@ import SingleItem from '@/components/main/components/singleItem/singleItem'
 import { getServerSideProps, PageProps } from "./getServerSideProps"
 
 
-
 const Item: FC<PageProps> = ({ item }) => {
     const { id, tittle } = item;
     return (

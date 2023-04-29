@@ -1,5 +1,5 @@
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
-import db from "@/pages/api/db/db";
+import db from "@/db/db";
 import Main from '@/components/main/main'
 import { FC } from 'react'
 import Head from '@/components/head/head'
@@ -32,12 +32,6 @@ const getServerSideProps: GetServerSideProps<PageProps> = async (context: GetSer
     console.log("id: ", id)
     const data = await db.getItemById(id);
     console.log(data);
-    // const data = {
-    //     id: "4dasdad45",
-    //     tittle: "tittle",
-    //     price: 111,
-    //     mainImage: ""
-    // };
 
     if (!data)
         return { notFound: true };

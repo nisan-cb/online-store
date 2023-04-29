@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import db from '@/pages/api/db/db';
+import db from '@/db/db';
 export async function GET(request: Request) {
   return new Response('Hello, Next.js!')
 }

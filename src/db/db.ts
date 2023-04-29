@@ -25,12 +25,6 @@ class DB {
             price: 111,
             mainImage: ""
         };
-        return {
-            id: item?.id || "",
-            tittle: item?.tittle || "",
-            price: item?.price || 0,
-            mainImage: item?.images[0] || ""
-        };
     }
 
 }

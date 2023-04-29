@@ -12,6 +12,7 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async (context:
     const data = await db.getItemById(id);
     console.log(data);
 
+
     if (!data)
         return { notFound: true };
 

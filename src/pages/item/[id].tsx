@@ -1,5 +1,5 @@
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
-import db from "@/db/db";
+import db from "@/pages/api/db/db";
 import Main from '@/components/main/main'
 import { FC } from 'react'
 import Head from '@/components/head/head'

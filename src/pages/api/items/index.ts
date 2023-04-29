@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import db from '@/db/db';
+import db from '@/pages/api/db/db';
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
     const { categoryName } = req.query;

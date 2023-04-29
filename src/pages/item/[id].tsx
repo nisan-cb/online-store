@@ -5,8 +5,11 @@ import { FC } from 'react'
 import Head from '@/components/head/head'
 import Header from '@/components/header/header'
 import SingleItem from '@/components/main/components/singleItem/singleItem'
-import { getServerSideProps, PageProps } from "./getServerSideProps"
 
+
+interface PageProps {
+    item: SingleItemData
+}
 
 const Item: FC<PageProps> = ({ item }) => {
     const { id, tittle } = item;
@@ -21,6 +24,20 @@ const Item: FC<PageProps> = ({ item }) => {
     )
 }
 
+
+
+const getServerSideProps: GetServerSideProps<PageProps> = async (context: GetServerSidePropsContext) => {
+    const params = context.params as { id: string };
+    const { id } = params;
+    console.log("id: ", id)
+    const data = await db.getItemById(id);
+    console.log(data);
+
+    if (!data)
+        return { notFound: true };
+
+    return { props: { item: data } };
+}
 
 export { getServerSideProps }
 export default Item;

@@ -6,7 +6,7 @@
     "dev": "nodemon",
     "build": "next build && tsc --project tsconfig.server.json",
     "deploy": "git push heroku main ",
-    "start": "set NODE_ENV=production && node dist/server.js"
+    "start": "set NODE_ENV=production && node dist/server.js -p $PORT"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",

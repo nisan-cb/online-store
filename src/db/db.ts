@@ -17,8 +17,8 @@ class DB {
     }
 
     async getItemById(id: string) {
-        // const item = this.items.find(item => item.id === id);
-        const item = this.items[0];
+        const item = this.items.find(item => item.id === id);
+        // const item = this.items[0];
         // return {
         //     id: "4dasdad45",
         //     tittle: "tittle",

@@ -1,15 +1,20 @@
 import { GetStaticPaths } from 'next'
 import config from "../../config.json";
 import { GetStaticProps } from "next";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import Header from "@/components/header/header";
 import Head from "@/components/head/head";
 import Main from "@/components/main/main";
 import Gallery from "@/components/main/components/gallery/gallery";
+import { useSession } from 'next-auth/react';
 
 
 const CategoryPage: FC<CollectionPageProps> = ({ categoryName }) => {
+    // const session = useSession();
 
+    // useEffect(() => {
+    //     console.log('Session:', session);
+    // }, [session]);
     return (
         <>
             <Head title={categoryName} />
